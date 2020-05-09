@@ -1,0 +1,17 @@
+
+Call:
+adonis(formula = com_data_sp ~ season * disturb, data = xy.mds,      permutations = 999, strata = xy.mds$site_code) 
+
+Permutation: free
+Number of permutations: 999
+
+Terms added sequentially (first to last)
+
+                Df SumsOfSqs MeanSqs F.Model      R2 Pr(>F)    
+season           1    0.5808 0.58080   4.046 0.03170  0.023 *  
+disturb          1    1.9070 1.90700  13.284 0.10407  0.001 ***
+season:disturb   1    0.0461 0.04609   0.321 0.00251  0.850    
+Residuals      110   15.7905 0.14355         0.86172           
+Total          113   18.3244                 1.00000           
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

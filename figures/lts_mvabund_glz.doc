@@ -1,0 +1,112 @@
+Time elapsed: 0 hr 0 min 24 sec
+Analysis of Deviance Table
+
+Model: manyglm(formula = insect.spp ~ com_data_lts$disturb_allow_overwinter * 
+Model:     com_data_lts$season, family = "negative_binomial")
+
+Multivariate test:
+                                                          Res.Df
+(Intercept)                                                  113
+com_data_lts$disturb_allow_overwinter                        112
+com_data_lts$season                                          111
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    110
+                                                          Df.diff
+(Intercept)                                                      
+com_data_lts$disturb_allow_overwinter                           1
+com_data_lts$season                                             1
+com_data_lts$disturb_allow_overwinter:com_data_lts$season       1
+                                                            Dev
+(Intercept)                                                    
+com_data_lts$disturb_allow_overwinter                     67.56
+com_data_lts$season                                        9.31
+com_data_lts$disturb_allow_overwinter:com_data_lts$season  0.63
+                                                          Pr(>Dev)
+(Intercept)                                                       
+com_data_lts$disturb_allow_overwinter                        0.001
+com_data_lts$season                                          0.113
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    0.926
+                                                             
+(Intercept)                                                  
+com_data_lts$disturb_allow_overwinter                     ***
+com_data_lts$season                                          
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Univariate Tests:
+                                                          sp_tet1
+                                                              Dev
+(Intercept)                                                      
+com_data_lts$disturb_allow_overwinter                      22.456
+com_data_lts$season                                             0
+com_data_lts$disturb_allow_overwinter:com_data_lts$season   0.058
+                                                                  
+                                                          Pr(>Dev)
+(Intercept)                                                       
+com_data_lts$disturb_allow_overwinter                        0.001
+com_data_lts$season                                          0.992
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    0.974
+                                                          sp_tet2
+                                                              Dev
+(Intercept)                                                      
+com_data_lts$disturb_allow_overwinter                      17.845
+com_data_lts$season                                         0.199
+com_data_lts$disturb_allow_overwinter:com_data_lts$season       0
+                                                                  
+                                                          Pr(>Dev)
+(Intercept)                                                       
+com_data_lts$disturb_allow_overwinter                        0.001
+com_data_lts$season                                          0.871
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    0.974
+                                                          sp_bru1
+                                                              Dev
+(Intercept)                                                      
+com_data_lts$disturb_allow_overwinter                      23.599
+com_data_lts$season                                         1.172
+com_data_lts$disturb_allow_overwinter:com_data_lts$season       0
+                                                                  
+                                                          Pr(>Dev)
+(Intercept)                                                       
+com_data_lts$disturb_allow_overwinter                        0.001
+com_data_lts$season                                          0.606
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    0.974
+                                                          sp_sht1
+                                                              Dev
+(Intercept)                                                      
+com_data_lts$disturb_allow_overwinter                       3.377
+com_data_lts$season                                         4.132
+com_data_lts$disturb_allow_overwinter:com_data_lts$season   0.558
+                                                                  
+                                                          Pr(>Dev)
+(Intercept)                                                       
+com_data_lts$disturb_allow_overwinter                        0.110
+com_data_lts$season                                          0.202
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    0.899
+                                                          sp_chl1
+                                                              Dev
+(Intercept)                                                      
+com_data_lts$disturb_allow_overwinter                       0.287
+com_data_lts$season                                         3.808
+com_data_lts$disturb_allow_overwinter:com_data_lts$season   0.017
+                                                                  
+                                                          Pr(>Dev)
+(Intercept)                                                       
+com_data_lts$disturb_allow_overwinter                        0.587
+com_data_lts$season                                          0.202
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    0.974
+                                                          sp_dum1
+                                                              Dev
+(Intercept)                                                      
+com_data_lts$disturb_allow_overwinter                           0
+com_data_lts$season                                             0
+com_data_lts$disturb_allow_overwinter:com_data_lts$season       0
+                                                                  
+                                                          Pr(>Dev)
+(Intercept)                                                       
+com_data_lts$disturb_allow_overwinter                        1.000
+com_data_lts$season                                          1.000
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    1.000
+Arguments:
+ Test statistics calculated assuming uncorrelated response (for faster computation) 
+P-value calculated using 999 resampling iterations via PIT-trap resampling (to account for correlation in testing.
+
