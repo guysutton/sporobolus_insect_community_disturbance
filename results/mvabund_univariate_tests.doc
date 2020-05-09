@@ -1,48 +1,37 @@
-Time elapsed: 0 hr 0 min 33 sec
+Time elapsed: 0 hr 0 min 30 sec
 Analysis of Deviance Table
 
 Model: manyglm(formula = insect.spp ~ com_data_lts$disturb_allow_overwinter * 
 Model:     com_data_lts$season, family = "negative_binomial")
 
 Multivariate test:
-                                                          Res.Df Df.diff    Dev Pr(>Dev)
-(Intercept)                                                  113                        
-com_data_lts$disturb_allow_overwinter                        112       1 104.84    0.001
-com_data_lts$season                                          111       1   7.79    0.217
-com_data_lts$disturb_allow_overwinter:com_data_lts$season    110       1   1.17    0.892
-                                                             
-(Intercept)                                                  
-com_data_lts$disturb_allow_overwinter                     ***
-com_data_lts$season                                          
-com_data_lts$disturb_allow_overwinter:com_data_lts$season    
+                                                          Res.Df Df.diff    Dev Pr(>Dev)    
+(Intercept)                                                  113                            
+com_data_lts$disturb_allow_overwinter                        112       1 104.84    0.001 ***
+com_data_lts$season                                          111       1   7.79    0.199    
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    110       1   1.17    0.903    
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Univariate Tests:
-                                                          sp_tet1          sp_tet2
-                                                              Dev Pr(>Dev)     Dev
-(Intercept)                                                                       
-com_data_lts$disturb_allow_overwinter                      18.519    0.001  42.442
-com_data_lts$season                                         0.045    0.987   0.022
-com_data_lts$disturb_allow_overwinter:com_data_lts$season   0.009    0.931       0
-                                                                   sp_bru1         
-                                                          Pr(>Dev)     Dev Pr(>Dev)
-(Intercept)                                                                        
-com_data_lts$disturb_allow_overwinter                        0.001  35.159    0.001
-com_data_lts$season                                          0.987   0.058    0.987
-com_data_lts$disturb_allow_overwinter:com_data_lts$season    1.000       0    0.945
-                                                          sp_sht1          sp_chl1
-                                                              Dev Pr(>Dev)     Dev
-(Intercept)                                                                       
-com_data_lts$disturb_allow_overwinter                       2.872    0.140   0.407
-com_data_lts$season                                         1.048    0.739   4.443
-com_data_lts$disturb_allow_overwinter:com_data_lts$season   0.141    0.931    0.47
-                                                                   sp_eur4         
-                                                          Pr(>Dev)     Dev Pr(>Dev)
-(Intercept)                                                                        
-com_data_lts$disturb_allow_overwinter                        0.509   5.444    0.058
-com_data_lts$season                                          0.157   2.171    0.484
-com_data_lts$disturb_allow_overwinter:com_data_lts$season    0.919   0.548    0.919
+                                                          sp_tet1          sp_tet2         
+                                                              Dev Pr(>Dev)     Dev Pr(>Dev)
+(Intercept)                                                                                
+com_data_lts$disturb_allow_overwinter                      18.519    0.001  42.442    0.001
+com_data_lts$season                                         0.045    0.991   0.022    0.991
+com_data_lts$disturb_allow_overwinter:com_data_lts$season   0.009    0.928       0    1.000
+                                                          sp_bru1          sp_sht1         
+                                                              Dev Pr(>Dev)     Dev Pr(>Dev)
+(Intercept)                                                                                
+com_data_lts$disturb_allow_overwinter                      35.159    0.001   2.872    0.134
+com_data_lts$season                                         0.058    0.991   1.048    0.707
+com_data_lts$disturb_allow_overwinter:com_data_lts$season       0    0.930   0.141    0.928
+                                                          sp_chl1          sp_eur4         
+                                                              Dev Pr(>Dev)     Dev Pr(>Dev)
+(Intercept)                                                                                
+com_data_lts$disturb_allow_overwinter                       0.407    0.524   5.444    0.051
+com_data_lts$season                                         4.443    0.156   2.171    0.459
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    0.47    0.928   0.548    0.928
                                                           sp_dum1         
                                                               Dev Pr(>Dev)
 (Intercept)                                                               
