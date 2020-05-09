@@ -395,7 +395,7 @@ ggplot(xy.bor, aes(lv1,
   theme(legend.key=element_blank(),
         legend.background=element_blank())
 
-ggsave("./figures/fig_boral_plot.png", 
+ggsave("./figures/fig_boral_plot_with_ellipses.png", 
        width = 6, 
        height = 4)
 
@@ -449,19 +449,18 @@ sites_tet1 <- com_data_lts %>%
   )) %>%
   ungroup() %>%
   group_by(season, disturb_allow_overwinter) %>%
-  #summarise(mean = mean(occ),
-  #          sd = sd(occ)) %>%
-  count(occ)
+  summarise(mean = mean(occ),
+            sd = sd(occ)) %>%
   mutate(species = "Tetramesa sp. 1") 
 sites_tet1
 
-sites <- sites_tet1 %>% 
-  ungroup() %>%
-  filter(occ == 1) %>% 
-  filter(disturb_allow_overwinter == "Disturbed")
-sites
-  sum(n)
-  
+#sites <- sites_tet1 %>% 
+#  ungroup() %>%
+#  filter(occ == 1) %>% 
+#  filter(disturb_allow_overwinter == "Disturbed") %>%
+#  mutate(species = "Tetramesa sp. 1") 
+#sites
+
 ############################################################
 # - Calculate summary statistics for Tetramesa sp. 2 
 ############################################################
@@ -705,6 +704,7 @@ ggplot(data = abun_all,aes(x = disturb_allow_overwinter,
                     colour = season),
                 position=position_dodge(1),
                 width = 0.7) +
+  scale_colour_manual(values=c("black", "gray60")) + 
   labs(x = "Disturbance regime",
        y = "Abundance \n (mean individuals per site)",
        colour = "Season") + 
@@ -716,7 +716,8 @@ ggplot(data = abun_all,aes(x = disturb_allow_overwinter,
         axis.text = element_text(colour = "black"),
         axis.title.x = element_text(margin = unit(c(2, 0, 0, 0), "mm")),
         axis.title.y = element_text(margin = unit(c(0, 4, 0, 0), "mm")),
-        legend.position = "right") 
+        legend.position = "right") +
+  guides(fill = "none")
 
 ggsave("fig_abundance_by_season_disturbance.png", 
        width = 7, 
@@ -741,6 +742,7 @@ sites_all <- sites_all %>%
     lower < 0 ~ 0,
     TRUE ~ lower
   )) %>%
+  ungroup() %>%
   mutate(disturb_allow_overwinter = fct_relevel(disturb_allow_overwinter,
                                                 "Undisturbed",
                                                 "Disturbed"),
@@ -764,6 +766,7 @@ ggplot(data = sites_all,aes(x = disturb_allow_overwinter,
   labs(x = "Disturbance regime",
        y = "Proportion surveys recorded",
        colour = "Season") + 
+  scale_colour_manual(values=c("black", "gray60")) + 
   scale_y_continuous(breaks = c(0, 0.2, 0.4, 0.6, 0.8, 1.0), 
                      limits = c(0, 1)) +
   geom_vline(xintercept = 1.5, linetype = "dashed",
