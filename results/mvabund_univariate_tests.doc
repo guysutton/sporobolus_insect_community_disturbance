@@ -1,4 +1,4 @@
-Time elapsed: 0 hr 0 min 30 sec
+Time elapsed: 0 hr 0 min 48 sec
 Analysis of Deviance Table
 
 Model: manyglm(formula = insect.spp ~ com_data_lts$disturb_allow_overwinter * 
@@ -8,8 +8,8 @@ Multivariate test:
                                                           Res.Df Df.diff    Dev Pr(>Dev)    
 (Intercept)                                                  113                            
 com_data_lts$disturb_allow_overwinter                        112       1 104.84    0.001 ***
-com_data_lts$season                                          111       1   7.79    0.199    
-com_data_lts$disturb_allow_overwinter:com_data_lts$season    110       1   1.17    0.903    
+com_data_lts$season                                          111       1   7.79    0.205    
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    110       1   1.17    0.898    
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -19,19 +19,19 @@ Univariate Tests:
 (Intercept)                                                                                
 com_data_lts$disturb_allow_overwinter                      18.519    0.001  42.442    0.001
 com_data_lts$season                                         0.045    0.991   0.022    0.991
-com_data_lts$disturb_allow_overwinter:com_data_lts$season   0.009    0.928       0    1.000
+com_data_lts$disturb_allow_overwinter:com_data_lts$season   0.009    0.931       0    1.000
                                                           sp_bru1          sp_sht1         
                                                               Dev Pr(>Dev)     Dev Pr(>Dev)
 (Intercept)                                                                                
-com_data_lts$disturb_allow_overwinter                      35.159    0.001   2.872    0.134
-com_data_lts$season                                         0.058    0.991   1.048    0.707
-com_data_lts$disturb_allow_overwinter:com_data_lts$season       0    0.930   0.141    0.928
+com_data_lts$disturb_allow_overwinter                      35.159    0.001   2.872    0.138
+com_data_lts$season                                         0.058    0.991   1.048    0.716
+com_data_lts$disturb_allow_overwinter:com_data_lts$season       0    0.936   0.141    0.921
                                                           sp_chl1          sp_eur4         
                                                               Dev Pr(>Dev)     Dev Pr(>Dev)
 (Intercept)                                                                                
-com_data_lts$disturb_allow_overwinter                       0.407    0.524   5.444    0.051
-com_data_lts$season                                         4.443    0.156   2.171    0.459
-com_data_lts$disturb_allow_overwinter:com_data_lts$season    0.47    0.928   0.548    0.928
+com_data_lts$disturb_allow_overwinter                       0.407    0.499   5.444    0.043
+com_data_lts$season                                         4.443    0.175   2.171    0.468
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    0.47    0.921   0.548    0.921
                                                           sp_dum1         
                                                               Dev Pr(>Dev)
 (Intercept)                                                               

@@ -1,15 +1,15 @@
-Time elapsed: 0 hr 0 min 16 sec
+Time elapsed: 0 hr 0 min 25 sec
 Analysis of Variance Table
 
 Model: manyglm(formula = insect.spp ~ com_data_lts$disturb_allow_overwinter * 
 Model:     com_data_lts$season, family = "negative_binomial")
 
 Multivariate test:
-                                                          Res.Df Df.diff  wald Pr(>wald)    
-(Intercept)                                                  113                            
-com_data_lts$disturb_allow_overwinter                        112       1 5.606     0.001 ***
-com_data_lts$season                                          111       1 2.882     0.208    
-com_data_lts$disturb_allow_overwinter:com_data_lts$season    110       1 0.777     0.845    
+                                                          Res.Df Df.diff  wald Pr(>wald)   
+(Intercept)                                                  113                           
+com_data_lts$disturb_allow_overwinter                        112       1 5.606     0.002 **
+com_data_lts$season                                          111       1 2.882     0.213   
+com_data_lts$disturb_allow_overwinter:com_data_lts$season    110       1 0.777     0.850   
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 Arguments:

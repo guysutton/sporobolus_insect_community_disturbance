@@ -13,36 +13,8 @@
 ##########################################################################################
 
 ######
-### - Visualise community composition - nMDS 
+### - (1) Visualise community composition - nMDS 
 ######
-
-# Keep only the LTS sites because of the differences in sampling effort 
-com_data_lts <- com_data %>%
-  dplyr::filter(survey_type == "LTS")
-
-# Now we need to extract only the columns with species abundance data
-com_data_sp <- com_data_lts %>%
-  group_by(site_code, sampling_date, season, disturb_allow_overwinter) %>%
-  dplyr::select(starts_with("sp_")) %>%
-  ungroup()
-com_data_sp
-
-# Store this data.frame so that we can extract factor names from it later with ease 
-org.data <- com_data_sp
-org.data
-
-# Now keep only the species abundances columns 
-com_data_sp <- com_data_sp %>% 
-  dplyr::select(-c(site_code, sampling_date, season, disturb_allow_overwinter))
-com_data_sp
-
-# Because of issues where rows sum to 0, we must use 
-# zero-adjusted Bray-Curtis vals - add dummy species where abundance = 1
-com_data_sp$sp_dum1 <- 1
-com_data_sp
-
-# Make this into a matrix
-com_matrix <- as.matrix(com_data_sp)
 
 # Perform a preliminary nMDS
 comm.mds <- metaMDS(comm = com_matrix, # matrix of species abundance data
@@ -126,7 +98,7 @@ comm.mds$stress
 # Here, our stress value = 0.12, so our nMDS is okay. 
 
 ######
-###   - PERMANOVA
+### - (2) PERMANOVA
 ######
 
 # Perform PERMANOVA using the 'adonis' function 
@@ -160,7 +132,7 @@ capture.output(adonis.add,
                file="./results/PERManova_no_interaction.doc")
 
 ######
-### - SIMPER analysis 
+### - (3) SIMPER analysis 
 ######
 
 # SIMPER assesses the contribution of each species the overall 

@@ -8,9 +8,9 @@ Number of permutations: 999
 Terms added sequentially (first to last)
 
                 Df SumsOfSqs MeanSqs F.Model      R2 Pr(>F)    
-season           1    0.6250  0.6250  3.3789 0.02576  0.022 *  
+season           1    0.6250  0.6250  3.3789 0.02576  0.020 *  
 disturb          1    3.2129  3.2129 17.3684 0.13241  0.001 ***
-season:disturb   1    0.0785  0.0785  0.4244 0.00324  0.759    
+season:disturb   1    0.0785  0.0785  0.4244 0.00324  0.776    
 Residuals      110   20.3482  0.1850         0.83860           
 Total          113   24.2646                 1.00000           
 ---
